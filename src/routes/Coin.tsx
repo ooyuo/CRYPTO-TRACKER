@@ -217,18 +217,18 @@ function Coin({}:ICoinProps) {
 
           <Tabs>
             <Tab isActive={chartMatch !== null}>
-              <Link to={`/CRYPTO-TRACKER/${coinId}/chart`}>Chart</Link>
+              <Link to={`/${coinId}/chart`}>Chart</Link>
             </Tab>
             <Tab isActive={priceMatch !== null}>
-              <Link to={`/CRYPTO-TRACKER/${coinId}/price`}>Price</Link>
+              <Link to={`/${coinId}/price`}>Price</Link>
             </Tab>
           </Tabs>
 
           <Switch>
-            <Route path={`/CRYPTO-TRACKER/:coinId/price`}>
+            <Route path={`/:coinId/price`}>
               <Price coinId={coinId}/>
             </Route>
-            <Route path={`/CRYPTO-TRACKER/:coinId/chart`}>
+            <Route path={`/:coinId/chart`}>
               <Chart coinId={coinId}/>
             </Route>
           </Switch>

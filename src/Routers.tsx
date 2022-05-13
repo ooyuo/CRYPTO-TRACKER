@@ -6,12 +6,12 @@ interface IRouterProps {}
 
 function Router({}: IRouterProps) {
     return (
-      <BrowserRouter>
+      <BrowserRouter basename={process.env.PUBLIC_URL}>
         <Switch>
-          <Route path="/CRYPTO-TRACKER/:coinId">
+          <Route path="/:coinId">
             <Coin />
           </Route>
-          <Route path="/CRYPTO-TRACKER">
+          <Route path="/">
             <Coins />
           </Route>
         </Switch>
