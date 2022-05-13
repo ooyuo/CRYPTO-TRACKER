@@ -1,4 +1,4 @@
-import { HashRouter, Switch, Route } from "react-router-dom";
+import { BrowserRouter, Switch, Route } from "react-router-dom";
 import Coins from "./routes/Coins";
 import Coin from "./routes/Coin";
 
@@ -6,16 +6,16 @@ interface IRouterProps {}
 
 function Router({}: IRouterProps) {
     return (
-      <HashRouter>
+      <BrowserRouter>
         <Switch>
-          <Route path="/:coinId">
+          <Route path="/CRYPTO-TRACKER/:coinId">
             <Coin />
           </Route>
-          <Route path="/">
+          <Route path="/CRYPTO-TRACKER">
             <Coins />
           </Route>
         </Switch>
-      </HashRouter>
+      </BrowserRouter>
     );
   }
 
