@@ -2,11 +2,11 @@ import styled from "styled-components";
 import { Link } from "react-router-dom";
 import { useEffect, useState } from "react";
 import { useQuery } from "react-query";
-import { fetchCoins } from "../api";
 import { Helmet } from "react-helmet";
 import { useRecoilValue, useSetRecoilState } from "recoil";
 import { isDarkAtom } from "../atoms";
 import { MdOutlineDarkMode, MdDarkMode } from "react-icons/md";
+import { fetchCoins } from "../api";
 
 const Container = styled.div`
   padding: 0px 20px;
