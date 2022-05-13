@@ -11,7 +11,7 @@ function Router({}: IRouterProps) {
           <Route path="/CRYPTO-TRACKER/:coinId">
             <Coin />
           </Route>
-          <Route path="/CRYPTO-TRACKER/">
+          <Route path="/CRYPTO-TRACKER">
             <Coins />
           </Route>
         </Switch>
