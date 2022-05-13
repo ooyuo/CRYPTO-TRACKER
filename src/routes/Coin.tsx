@@ -181,7 +181,7 @@ function Coin({}:ICoinProps) {
       
       <Header>
         <Title>
-          <Link to={`/CRYPTO-TRACKER`}><span>Back</span></Link>
+          <Link to={`/CRYPTO-TRACKER/`}><span>Back</span></Link>
           {state?.name ? state.name : loading ? "Loading..." : infoData?.name}
         </Title> 
       </Header>
