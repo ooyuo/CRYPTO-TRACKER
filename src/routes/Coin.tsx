@@ -155,8 +155,8 @@ interface ICoinProps {}
 function Coin({}:ICoinProps) {
   const { coinId } = useParams<RouteParams>();
   const { state } = useLocation<RouteState>();
-  const priceMatch = useRouteMatch("/:coinId/price");
-  const chartMatch = useRouteMatch("/:coinId/chart");
+  const priceMatch = useRouteMatch("/CRYPTO-TRACKER/:coinId/price");
+  const chartMatch = useRouteMatch("/CRYPTO-TRACKER/:coinId/chart");
   console.log(priceMatch)
 
   const {isLoading: infoLoading, data: infoData} = useQuery<InfoData>(
@@ -217,18 +217,18 @@ function Coin({}:ICoinProps) {
 
           <Tabs>
             <Tab isActive={chartMatch !== null}>
-              <Link to={`/${coinId}/chart`}>Chart</Link>
+              <Link to={`/CRYPTO-TRACKER/${coinId}/chart`}>Chart</Link>
             </Tab>
             <Tab isActive={priceMatch !== null}>
-              <Link to={`/${coinId}/price`}>Price</Link>
+              <Link to={`/CRYPTO-TRACKER/${coinId}/price`}>Price</Link>
             </Tab>
           </Tabs>
 
           <Switch>
-            <Route path={`/:coinId/price`}>
+            <Route path={`/CRYPTO-TRACKER/:coinId/price`}>
               <Price coinId={coinId}/>
             </Route>
-            <Route path={`/:coinId/chart`}>
+            <Route path={`/CRYPTO-TRACKER/:coinId/chart`}>
               <Chart coinId={coinId}/>
             </Route>
           </Switch>
