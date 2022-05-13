@@ -81,7 +81,7 @@ function Coins({}:ICoinsProps) {
     const setDarkAtom = useSetRecoilState(isDarkAtom);
     const toggleDarkAtom = () => setDarkAtom(prev => !prev);
     const {isLoading, data} = useQuery<ICoin[]>("allCoins", fetchCoins);
-      console.log(toggleDarkAtom)
+
     return (
         <Container>
           <Helmet>
